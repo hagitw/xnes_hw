@@ -1,0 +1,61 @@
+﻿@model IEnumerable<xnes_hw.Models.Customer>
+
+@{
+    ViewBag.Title = "CustomersList";
+}
+<h2>CustomersList</h2>
+
+<table class="table">
+    <tr>       
+        <th>
+            @Html.DisplayNameFor(model => model.HebrewName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EnglishName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bank)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BankBranch)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.HebrewName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EnglishName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.CustomerId)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.City)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Bank)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BankBranch)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.BankAccount)
+    </td>
+
+</tr>
+
+    }
+
+</table>  
